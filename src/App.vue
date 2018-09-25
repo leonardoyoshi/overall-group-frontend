@@ -1,13 +1,23 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <HeaderComponent/>
+    <main>
+      <router-view/>
+    </main>
+    <FooterComponent/>
   </div>
 </template>
 
 <script>
+import HeaderComponent from './shared/Header'
+import FooterComponent from './shared/Footer'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    HeaderComponent,
+    FooterComponent
+  }
 }
 </script>
 
@@ -19,5 +29,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
 }
 </style>
