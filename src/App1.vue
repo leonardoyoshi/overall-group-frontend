@@ -1,21 +1,23 @@
 <template>
-  <div id="app">
+  <div id="ap">
     <InitialRootHeader />
-      <HeaderComponent />
-        <main>
-          <router-view />
-        </main>
-    <FooterComponent />
+      <div class="container">
+          <HeaderComponent/>
+          <main>
+            <router-view />
+          </main>
+          <FooterComponent />
+      </div>
   </div>
 </template>
 <script>
 
-import InitialRootHeader from './components/root/Initial.vue'
+import InitialRootHeader from './components/root/initial'
 import HeaderComponent from './shared/Header'
 import FooterComponent from './shared/Footer'
 
 export default {
-  name: 'App',
+  name: 'App1',
   components: {
     InitialRootHeader,
     HeaderComponent,
@@ -25,7 +27,11 @@ export default {
 </script>
 
 <style>
-#app {
+body{
+  margin: 0
+}
+
+#ap {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

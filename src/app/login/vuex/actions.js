@@ -1,4 +1,4 @@
-import loginCampos from '../form/loginCampos'
+import loginCampos from '../form/LoginCampos'
 import http from '@/http'
 
 export default {

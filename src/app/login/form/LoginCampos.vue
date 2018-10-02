@@ -7,15 +7,18 @@
       </div>
        <div class="form-group"><br/>
         <label style="color: #323d7b; font-size: 30px; margin-bottom: 30px;">Password</label>
-       <input type="password" v-model="user.password" class="form-control" placeholder="Senha..." v-on:keyup.enter="doLogin"><br/>
+       <input type="password" v-model="user.password" class="form-control" placeholder="Senha..." v-on:keyup.enter="doLogin">
+       <!--<input type="password" v-model="user.password" class="form-control" placeholder="Senha...">-->
+       <br/>
        </div>
       <button style="width: 30%" type="submit" @click="doLogin" class="btn btn-success">Enviar</button>
+      <!--<button style="width: 30%" type="submit" class="btn btn-success">Enviar</button>-->
     </div>
   </div>
 </template>
 
 <script>
-// import http from '@/http'
+import http from '@/http'
 
 export default {
   data () {
@@ -25,8 +28,8 @@ export default {
         password: ''
       }
     }
-  }
-/*
+  },
+
   methods: {
     doLogin () {
       let headers = {'Content-Type': 'application/json'}
@@ -40,21 +43,21 @@ export default {
           var auth = response.data
           console.log(auth.data.access_token)
           localStorage.setItem('token', auth.data.access_token)
-          this.$router.go('/group')
+          // this.$router.go('/group')
         })
         .catch(function (error) {
           console.log(error)
           alert('Dados incorretos!')
         })
     }
-  } */
+  }
 }
 </script>
 <style lang="css">
 .btn {
   padding-left: 30px;
   padding-right: 30px;
-  margin-bottom: 0px;
+  margin-bottom: 50px;
   margin-top: 30px;
   padding: 10px;
 }

@@ -1,10 +1,7 @@
 <template>
-  <header>
-  <br/>
-  <div class="topbar">
-    <h2>Group</h2>
-  </div>
-  </header>
+<header>
+<br/>
+</header>
 </template>
 
 <script>
